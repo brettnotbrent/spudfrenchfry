@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #ff00ff;
+	/*background: repeating-linear-gradient(
+  		45deg,
+  		#ff00ff,
+  		#660066 30px
+	);*/
+}
+
+section {
+	width: 800px;
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 55px;
+	font-family: "Helvetica", sans-serif;
+	text-transform: uppercase;
+	font-style: bold;
+	color: #ffccff;
+	/*text-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);*/
+}
+
+/*h1:hover {
+	color: #00cccc;
+	cursor: pointer;
+}*/
+
+img	{
+	float: left;
+}
+
+img.inset { float: right; }
+
+p {
+	float: left;
+	color: white;
+	font-size: 30px; 
+}
