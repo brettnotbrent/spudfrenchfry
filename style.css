@@ -3,7 +3,10 @@ html {
   height: 100%;
   background: radial-gradient(circle, #f102f9 70%, #76017a);
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-attachment: fixed;
+  background-size: 100%;
+  position: relative;
+  font-family: "Helvetica", Arial, sans-serif; }
 
 main#maincontent {
   display: -webkit-box;
@@ -24,18 +27,43 @@ main#maincontent {
   -ms-justify-content: flex-start;
   justify-content: flex-start;
   -ms-flex-pack: flex-start;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   padding: 15px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
+  @media only screen and (max-width: 481px) {
+    main#maincontent {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   main#maincontent section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    background-color: orange;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid white;
     height: 200px;
-    min-width: 200px;
+    width: 200px;
     margin: 0 15px 15px 0; }
+    @media only screen and (max-width: 481px) {
+      main#maincontent section {
+        width: inherit; } }
+    main#maincontent section.logo {
+      background-color: white;
+      padding: 10px; }
+      main#maincontent section.logo h1 {
+        font-size: 46px;
+        padding: 0;
+        margin: 0;
+        color: #f102f9; }
 
 /*# sourceMappingURL=style.css.map */

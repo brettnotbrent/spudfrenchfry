@@ -1,0 +1,20 @@
+// in-line media query
+$break-small: 480px;
+$break-medium: 1280px;
+$break-standard: 1366px;
+$break-large: 1920px;
+
+@mixin respond-to($media) {
+  @if $media == small-screen {
+    @media only screen and (max-width: $break-small + 1) { @content; }
+  }
+  @else if $media == medium-screen {
+    @media only screen and (min-width: $break-small + 2) { @content; }
+  }
+  @else if $media == standard-screen {
+    @media only screen and (min-width: $break-standard) { @content; }
+  }
+  @else if $media == large-screen {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
