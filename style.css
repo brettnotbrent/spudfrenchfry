@@ -1,3 +1,8 @@
+p {
+  font-size: 16px;
+  line-height: 26px;
+  color: black; }
+
 html {
   width: 100%;
   height: 100%;
@@ -50,10 +55,10 @@ main#maincontent {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
-    border: 1px solid white;
-    height: 200px;
-    width: 200px;
-    margin: 0 15px 15px 0; }
+    width: 220px;
+    height: 220px;
+    margin: 0 15px 15px 0;
+    overflow: hidden; }
     @media only screen and (max-width: 481px) {
       main#maincontent section {
         width: inherit; } }
@@ -65,5 +70,15 @@ main#maincontent {
         padding: 0;
         margin: 0;
         color: #ff00bb; }
+    main#maincontent section img {
+      width: inherit; }
+    main#maincontent section.copyblock {
+      background-color: white;
+      padding: 15px; }
+    main#maincontent section.x2 {
+      width: 455px; }
+      @media only screen and (max-width: 481px) {
+        main#maincontent section.x2 {
+          width: inherit; } }
 
 /*# sourceMappingURL=style.css.map */

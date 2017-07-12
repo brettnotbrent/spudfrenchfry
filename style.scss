@@ -1,6 +1,8 @@
 @import 'colors';
+@import 'typography';
 @import 'mixins';
 @import 'mediaqueries';
+
 
 html {
 	width: 100%;
@@ -12,6 +14,8 @@ html {
 	position: relative;
 	font-family: "Helvetica", Arial, sans-serif;
 }
+
+$basecellwidth: 220px;
 
 main#maincontent {
 	@include flexbox();
@@ -32,16 +36,14 @@ main#maincontent {
 	section {
 		@include flexbox();
 		@include box-sizing(border-box);
+
 		position: relative;
-
-		border: 1px solid white;
-		height: 200px;
-		width: 200px;
+		width: $basecellwidth;
+		height: $basecellwidth;
 		margin: 0 15px 15px 0;
+		overflow: hidden;
 
-		@include respond-to(small-screen) { 
-			width: inherit;
-		}
+		@include respond-to(small-screen) { width: inherit; }
 
 		&.logo {
 			background-color: white;
@@ -53,7 +55,18 @@ main#maincontent {
 				margin: 0;
 				color: $pink;
 			}
+		}
 
+		img { width: inherit; }
+
+		&.copyblock {
+			background-color: white;
+			padding: 15px;
+		}
+
+		&.x2 {
+			width: $basecellwidth * 2 + 15px;
+			@include respond-to(small-screen) { width: inherit; }
 		}
 	}
 }
